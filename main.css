@@ -1,27 +1,23 @@
-
 body {
- background: #252839;
+  background: #252839;
 }
-.container{
-  
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 100vh;
- 
-  background-image: url(heard.png);
+  min-height: 60vh;
+
+  background-image: url(heart.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
 
 .dws1 {
   position: absolute;
   animation: pulsing 2s infinite;
-
 }
 
 .heart {
@@ -30,11 +26,13 @@ body {
   height: 170px;
   /* background-color: red; */
   background-image: linear-gradient(
-  45deg, rgb(255, 238, 0) 50%, rgb(0, 112, 218) 50% );
+    45deg,
+    rgb(255, 238, 0) 50%,
+    rgb(0, 112, 218) 50%
+  );
   box-shadow: -1px 0px 2px #444;
   border-radius: 50px 50px 0 0;
   transform: rotate(315deg);
-  
 }
 /* Формируем правую часть */
 .heart:before {
@@ -46,18 +44,26 @@ body {
   content: "";
 
   background-image: linear-gradient(
-  45deg, rgb(255, 238, 0) 50%, rgb(0, 112, 218) 50%);
+    45deg,
+    rgb(255, 238, 0) 50%,
+    rgb(0, 112, 218) 50%
+  );
   border-radius: 0 50px 50px 0;
-
 }
 
 @keyframes pulsing {
-  0% {transform: scale(0.5); }
-  50% {transform: scale(1.0);}
-  100% {transform: scale(0.5);}
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
 }
 
-h1{
+h1 {
   position: relative;
   margin: 0;
   margin: 0 auto;
@@ -66,12 +72,51 @@ h1{
   font-size: 50px;
   /* text-transform: uppercase; */
   top: -137px;
-    text-shadow: 1px 1px 3px #f9f5f5, 0px 1px 3px #292828;
+  text-shadow: 1px 1px 3px #f9f5f5, 0px 1px 3px #292828;
 }
-.button-box{
-padding-top: 30px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-  
+.button-box {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-start,
+.btn-stop {
+  width: 60px;
+  height: 20px;
+  /* background-image: linear-gradient(90deg, #2544d3, #d80cfe); */
+  border-radius: 20px;
+  border: none;
+  /* color: white; */
+  font-weight: 500;
+}
+.btn-start {
+  margin-right: 10px;
+  /* background-image: linear-gradient(90deg, #d80cfe, #2544d3); */
+}
+img {
+  width: 40%;
+
+  animation: go-left-right 10s infinite;
+  -webkit-animation: go-left-right 10s infinite;
+
+  position: relative;
+}
+@keyframes go-left-right {
+  from {
+    left: calc(100% - 50px);
+  }
+  to {
+    left: -50%;
+  }
+}
+
+/* Префикс для Chrome, Opera, Safari */
+@-webkit-keyframes go-left-right {
+  from {
+    left: calc(100% - 50px);
+  }
+  to {
+    left: -50%;
+  }
 }

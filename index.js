@@ -15,11 +15,9 @@ function changesBackgroundColor() {
     intervalID = setInterval(() => {
       text.style.color = `${getRandomHexColor()}`;
     
-      // document.body.style.backgroundColor = `${getRandomHexColor()}`;
-      
-    
     }, 1000);
   btnStart.disabled = true;
+  
 }
 
 function stopChangesBackgroundColorOfBody() {
