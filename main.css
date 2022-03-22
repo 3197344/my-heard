@@ -1,0 +1,51 @@
+
+/* ---------------heard -------------*/
+.dws1 {
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  animation: pulsing 2s infinite;
+}
+
+.heart {
+  position: relative;
+  width: 50px;
+  height: 85px;
+  /* background-color: red; */
+  background-image: linear-gradient(
+  45deg, rgb(251, 255, 0) 50%, rgb(0, 112, 218) 50% );
+  box-shadow: -1px 0px 2px #444;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(315deg);
+  
+}
+/* Формируем правую часть */
+.heart:before {
+  position: absolute;
+  width: 85px;
+  height: 50px;
+  left: 0;
+  bottom: 0;
+  content: "";
+
+  background-image: linear-gradient(
+  45deg, rgb(251, 255, 0) 50%, rgb(0, 112, 218) 50%);
+  border-radius: 0 50px 50px 0;
+
+}
+
+@keyframes pulsing {
+  0% {
+    transform: scale(0.5);
+    
+  }
+  50% {
+    transform: scale(1.0);
+    
+    
+  }
+  100% {
+    transform: scale(0.5);
+    
+  }
+}
